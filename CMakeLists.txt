@@ -1,7 +1,9 @@
+cmake_minimum_required(VERSION 3.7)
 
 project(TestSDL C)
-find_library(SDL2_LIBRARY NAME SDL2)
+
+find_package(SDL2 REQUIRED)
+include_directories(${SDL2_INCLUDE_DIRS})
 
 add_executable(test-sdl main.c)
-include_directories(test-sdl ${SDL2_INCLUDE_DIRS})
 target_link_libraries(test-sdl ${SDL2_LIBRARIES})
