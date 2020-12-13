@@ -20,3 +20,11 @@ before_script:
 script:
   - cmake --build .
 
+deploy:
+  provider: releases
+  api_key: "b99271947e1d8c1016739c649a6081b8d688a3d1"
+  file: "test-sdl"
+  skip_cleanup: true
+  draft: true
+  overwrite: true
+
