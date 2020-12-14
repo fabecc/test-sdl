@@ -22,10 +22,11 @@ script:
 
 deploy:
   provider: releases
-  api_key: "b99271947e1d8c1016739c649a6081b8d688a3d1"
+  api_key: $key
   file: "test-sdl"
   skip_cleanup: true
   draft: true
   overwrite: true
   on:
-    all_branches: true
+    branch: master
+
